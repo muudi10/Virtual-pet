@@ -43,3 +43,14 @@ describe('constructor', () => {
     })
   })
 
+  describe('feed', () => {
+  
+    it('throws an error if the pet is not alive', () => {
+        const cat = new Pet('Fido');
+  
+        cat.age = 30;
+  
+        expect(() => cat.feed()).toThrow('Your pet is no longer alive :(');
+      });
+    });
+  
